@@ -2,27 +2,27 @@ Database
 ====
 
 #table list
-users
-prototypes
-comments
-likes
-images
+- users
+- prototypes
+- comments
+- likes
+- prototypeimages
 
 # Users
 
 ## column
 - id :integer
-- name :string
+- name :text
 - email :text
-- password :string
-- avatar :text
-- member :string
-- profile :text
+- password :text
+- avatar :string
+- member :text
+- profile :string
 - works :text
 
 ## associations
-has_many :prototypes
-has_many :comments
+- has_many :prototypes
+- has_many :comments
 
 
 
@@ -34,25 +34,25 @@ has_many :comments
 - catch_copy :text
 - concept :text
 - user_id :integer
-- prototype_id
+- prototype_id :integer
 
 ## association
-belong_to user
-has_many :comments
-has_many :likes
-has_many :images
+- belongs_to :user
+- has_many :comments
+- has_many :likes
+- has_many :images
 
 # Comments
 
 ## column
 - id :integer
-- comment :text
+- text :text
 - user_id :integer
 - prototype_id :integer
 
 ##associstions
-belong_to :prototype
-belong_to :user
+- belongs_to :prototype
+- belongs_to :user
 
 # Likes
 
@@ -62,15 +62,16 @@ belong_to :user
 - user_id :integer
 
 ## associations
-belong_to :prototype
-belong_to :user
+- belongs_to :prototype
+- belongs_to :user
 
-# Images
+# Prototypeimages
 
 ## column
 - id :integer
 - prototype_id :integer
-- image
+- image :string
+- role :string
 
 # associations
-belong_to :prototype
+- belongs_to :prototype
