@@ -18,7 +18,7 @@ Database
 |user_id|integer|
 |catch_copy|string|
 |concept|string|
-|like_count|integer|
+|likes_count|integer|
 |image|string|
 
 ### Comments
@@ -33,7 +33,6 @@ Database
 |:---:|:---:|
 |prototype_id|integer|
 |status|integer|
-|profile|string|
 
 ### Likes
 |column|type|
