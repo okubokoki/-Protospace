@@ -12,13 +12,13 @@ Database
 
 ## column
 - id :integer
-- name :text
-- email :text
-- password :text
+- name :string
+- email :string
+- password :string
 - avatar :string
-- member :text
-- profile :string
-- works :text
+- member :string
+- profile :text
+- works :string
 
 ## associations
 - has_many :prototypes
@@ -31,8 +31,8 @@ Database
 ## column
 - id :integer
 - title :string
-- catch_copy :text
-- concept :text
+- catch_copy :string
+- concept :string
 - user_id :integer
 - prototype_id :integer
 
