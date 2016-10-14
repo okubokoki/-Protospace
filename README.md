@@ -6,11 +6,34 @@ Database
 - prototypes
 - comments
 - likes
-- prototypeimages
+- images
 
-# Users
+# Association
 
-## column
+## Users
+- has_many :prototypes
+- has_many :comments
+
+## Prototypes
+- belongs_to :user
+- has_many :comments
+- has_many :likes
+- has_many :images
+
+## Comments
+- belongs_to :prototype
+- belongs_to :user
+
+## Likes
+- belongs_to :prototype
+- belongs_to :user
+
+## Images
+- belongs_to :prototype
+
+# column
+
+## Users
 - id :integer
 - name :string
 - email :string
@@ -20,15 +43,7 @@ Database
 - profile :text
 - works :string
 
-## associations
-- has_many :prototypes
-- has_many :comments
-
-
-
-# Prototypes
-
-## column
+## Prototypes
 - id :integer
 - title :string
 - catch_copy :string
@@ -36,42 +51,19 @@ Database
 - user_id :integer
 - prototype_id :integer
 
-## association
-- belongs_to :user
-- has_many :comments
-- has_many :likes
-- has_many :images
-
-# Comments
-
-## column
+## Comments
 - id :integer
 - text :text
 - user_id :integer
 - prototype_id :integer
 
-##associstions
-- belongs_to :prototype
-- belongs_to :user
-
-# Likes
-
-##column
+## Likes
 - id :integer
 - prototype_id :integer
 - user_id :integer
 
-## associations
-- belongs_to :prototype
-- belongs_to :user
-
-# Prototypeimages
-
-## column
+## Images
 - id :integer
 - prototype_id :integer
 - image :string
 - role :string
-
-# associations
-- belongs_to :prototype
